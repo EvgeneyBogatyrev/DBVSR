@@ -6,9 +6,9 @@ def set_template(args):
         args.dir_data = '/home/jinshan/data3/CSS_code_Kernel/code_test/datasets/REDS/test'
         args.data_test = 'VideoSR'
         args.testset = "REDS4"
-        args.dir_data_test = 'C:/SR/DBVSR/testset/REDS/test'#'/home/jinshan/data3/CSS_code_Kernel/code_test/datasets/REDS/test'
-        args.fc_pretrain = '../pretrain/kernel.pt'
-        args.pwc_pretrain = '../pretrain/network-default.pytorch'
+        args.dir_data_test = '../testset/REDS/test'#'C:/Users/evgen/tmp/run_sr/dataset'##'/home/jinshan/data3/CSS_code_Kernel/code_test/datasets/REDS/test'
+        args.fc_pretrain = 'C:/SR/Models/DBVSR/pretrain/kernel.pt'
+        args.pwc_pretrain = 'C:/SR/Models/DBVSR/pretrain/network-default.pytorch'
         args.fcn_number = 2
         args.kernel_size = (15, 15)
         args.grad_clip = 0.5
