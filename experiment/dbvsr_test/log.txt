@@ -1,0 +1,36 @@
+
+Evaluation:
+[VideoSR]	average stage_PSNR: nan(Best: nan @epoch 1)
+
+Evaluation:
+[VideoSR]	average stage_PSNR: nan(Best: nan @epoch 1)
+
+Evaluation:
+[VideoSR]	average stage_PSNR: nan(Best: nan @epoch 1)
+
+Evaluation:
+[VideoSR]	average stage_PSNR: nan(Best: nan @epoch 1)
+
+Evaluation:
+[VideoSR]	average stage_PSNR: nan(Best: nan @epoch 1)
+
+Evaluation:
+[VideoSR]	average stage_PSNR: nan(Best: nan @epoch 1)
+
+Evaluation:
+[VideoSR]	average stage_PSNR: nan(Best: nan @epoch 1)
+
+Evaluation:
+[VideoSR]	average stage_PSNR: nan(Best: nan @epoch 1)
+
+Evaluation:
+
+Evaluation:
+
+Evaluation:
+
+Evaluation:
+
+Evaluation:
+
+Evaluation:
