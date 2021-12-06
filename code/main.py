@@ -8,9 +8,9 @@ from trainer.trainer_dbvsr import TRAINER_DBVSR
 from trainer.trainer_baseline_lr import TRAINER_BASELINE_LR
 from trainer.trainer_baseline_hr import TRAINER_BASELINE_HR
 from logger import logger
+from datetime import datetime
 
 args = option.args
-print(args)
 torch.manual_seed(args.seed)
 chkp = logger.Logger(args)
 
