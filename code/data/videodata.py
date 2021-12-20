@@ -54,6 +54,10 @@ class VIDEODATA(data.Dataset):
     def _scan(self):
         vid_gt_names = sorted(glob.glob(os.path.join(self.dir_gt, '*')))
         vid_input_names = sorted(glob.glob(os.path.join(self.dir_input, '*')))
+        
+        print(vid_gt_names)
+        print(vid_input_names)
+
         assert len(vid_gt_names) == len(vid_input_names), "len(vid_gt_names) must equal len(vid_input_names)"
 
         images_gt = []
