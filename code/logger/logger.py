@@ -141,7 +141,15 @@ class Logger:
             elif img.shape[2] == 3 and self.args.n_colors == 1:
                 img = sc.ycbcr2rgb(img.astype('float')).clip(0, 1)
                 img = (255 * img).round().astype('uint8')
-            imageio.imwrite('{}_{}.png'.format(filename, post), img)
+            words = list(filename.split('//'))
+            last = words[-1]
+            from pathlib import Path
+            words = list(last.split('/'))
+            direct = ""
+            for word in words[:-1]:
+                direct += "/" + word
+            Path(direct).mkdir(parents=True, exist_ok=True)
+            imageio.imwrite(f"/{last}.png", img)
 
     def start_log(self, train=True):
         if train:

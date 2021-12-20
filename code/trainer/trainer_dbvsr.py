@@ -75,8 +75,8 @@ class TRAINER_DBVSR(Trainer):
         self.model.eval()
         self.ckp.start_log(train=False)
         with torch.no_grad():
-            tqdm_test = tqdm(self.loader_test, ncols=80)
-            for idx_img, (input, gt, filename, kernel, input_bic) in enumerate(tqdm_test):
+            #tqdm_test = tqdm(self.loader_test, ncols=80)
+            for idx_img, (input, gt, filename, kernel, input_bic) in enumerate(self.loader_test):
 
                 filename = filename[self.args.n_sequences // 2][0]
 

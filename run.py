@@ -6,7 +6,7 @@ os.system("chmod -R 0777 /model")
 with open('/model/run.sh', 'w') as f:
     f.write("mkdir /model/result\n")
 
-    f.write(f"python3 /model/code/main.py --test_only")
+    f.write(f"python3 /model/code/main.py --test_only\n")
         
     f.write("chmod -R 0777 /model\n")
     
