@@ -101,7 +101,7 @@ class TRAINER_DBVSR(Trainer):
 
                     save_list = [sr_output]
 
-                    self.ckp.save_images(filename, save_list, self.args.testset)
+                    self.ckp.save_images(filename, save_list, '/model/result')
 
             self.ckp.end_log(len(self.loader_test), train=False)
             best = self.ckp.psnr_log.max(0)

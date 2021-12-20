@@ -6,14 +6,14 @@ def set_template(args):
         args.dir_data = '/home/jinshan/data3/CSS_code_Kernel/code_test/datasets/REDS/test'
         args.data_test = 'VideoSR'
         args.testset = "REDS4"
-        args.dir_data_test = '/main/models/DBVSR/testset/REDS/test'#'C:/Users/evgen/tmp/run_sr/dataset'##'/home/jinshan/data3/CSS_code_Kernel/code_test/datasets/REDS/test'
-        args.fc_pretrain = '/main/models/DBVSR/pretrain/kernel.pt'
-        args.pwc_pretrain = '/main/models/DBVSR/pretrain/network-default.pytorch'
+        args.dir_data_test = '/dataset'#'C:/Users/evgen/tmp/run_sr/dataset'##'/home/jinshan/data3/CSS_code_Kernel/code_test/datasets/REDS/test'
+        args.fc_pretrain = '/model/pretrain/kernel.pt'
+        args.pwc_pretrain = '/model/pretrain/network-default.pytorch'
         args.fcn_number = 2
         args.kernel_size = (15, 15)
         args.grad_clip = 0.5
         # args.save_middle_models = True
-        args.test_model_path = "/main/models/DBVSR/models_in_paper/dbvsr/model_dbvsr.pt"
+        args.test_model_path = "/model/models_in_paper/dbvsr/model_dbvsr.pt"
         # args.test_only = True
 
     elif args.template == 'baseline_lr':
