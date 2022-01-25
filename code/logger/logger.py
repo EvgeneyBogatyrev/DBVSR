@@ -31,27 +31,27 @@ class Logger:
                 self.psnr_log = torch.load(self.dir + '/psnr_log.pt')
                 print('Continue from epoch {}...'.format(str(50)))
 
-        if not os.path.exists(self.dir):
-            os.makedirs(self.dir)
-            if not os.path.exists(self.dir + '/model'):
-                os.makedirs(self.dir + '/model')
-        if not os.path.exists(self.dir + '/result/' + self.args.data_test):
-            print("Creating dir for saving images...", self.dir + '/result/' + self.args.data_test)
-            os.makedirs(self.dir + '/result/' + self.args.data_test)
+        #if not os.path.exists(self.dir):
+        #    os.makedirs(self.dir)
+        #    if not os.path.exists(self.dir + '/model'):
+        #        os.makedirs(self.dir + '/model')
+        #if not os.path.exists(self.dir + '/result/' + self.args.data_test):
+        #    print("Creating dir for saving images...", self.dir + '/result/' + self.args.data_test)
+        #    os.makedirs(self.dir + '/result/' + self.args.data_test)
 
         print('Save Path : {}'.format(self.dir))
 
         open_type = 'a' if os.path.exists(self.dir + '/log.txt') else 'w'
-        self.log_file = open(self.dir + '/log.txt', open_type)
-        with open(self.dir + '/config.txt', open_type) as f:
-            f.write('From epoch {}...'.format(len(self.psnr_log)) + '\n\n')
-            for arg in vars(args):
-                f.write('{}: {}\n'.format(arg, getattr(args, arg)))
-            f.write('\n')
+        #self.log_file = open(self.dir + '/log.txt', open_type)
+        #with open(self.dir + '/config.txt', open_type) as f:
+        #    f.write('From epoch {}...'.format(len(self.psnr_log)) + '\n\n')
+        #    for arg in vars(args):
+        #        f.write('{}: {}\n'.format(arg, getattr(args, arg)))
+        #    f.write('\n')
 
     def write_log(self, log):
         print(log)
-        self.log_file.write(log + '\n')
+        #self.log_file.write(log + '\n')
 
     def save(self, trainer, epoch, is_best):
         trainer.model.save(self.dir, epoch, is_best)
@@ -111,8 +111,8 @@ class Logger:
         if self.args.model == 'DBVSR':
             f = filename.split('.')
             dirname = '{}/result/{}/{}/{}'.format(self.dir, self.args.data_test, testset, f[0])
-            if not os.path.exists(dirname):
-                os.makedirs(dirname)
+            #if not os.path.exists(dirname):
+                #os.makedirs(dirname)
             filename = '{}/{}'.format(dirname, f[1])
             postfix = ['dbvsr']
 
@@ -194,4 +194,4 @@ class Logger:
         plt.close(fig)
 
     def done(self):
-        self.log_file.close()
+        pass#self.log_file.close()
