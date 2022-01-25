@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 #os.system("chmod -R 0777 /model")
-
+os.system("rm -rf /model/result")
 with open('/model/run.sh', 'w') as f:
     f.write("mkdir /model/result\n")
 
